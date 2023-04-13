@@ -38,11 +38,11 @@ def dough():
     print("2. Thick Crust Dough")
     d=int(input("Enter your choice: "))
     if(d==1):
-        dobj=ThinCrustDough(100)
+        dobj=ThinCrustDough(120)
         dcost=dobj.get_dough_price()
         calculateCost(dcost)
     elif(d==2):
-        dobj=ThickCrustDough(120)
+        dobj=ThickCrustDough(150)
         dcost=dobj.get_dough_price()
         calculateCost(dcost)
     else:
@@ -57,22 +57,22 @@ def sauce():
     print("d. Barbecue Sauce")
     s=input("Enter your choice: ")
     if(s=='a'):
-        sobj=PlumTomatoSauce(100)
+        sobj=PlumTomatoSauce(50)
         dough()
         scost=sobj.get_sauce_price()
         calculateCost(scost)
     elif(s=='b'):
-        sobj=PumpkinSauce(120)
+        sobj=PumpkinSauce(100)
         dough()
         scost=sobj.get_sauce_price()
         calculateCost(scost)
     elif(s=='c'):
-        sobj= MarinaraSause(200)
+        sobj= MarinaraSause(150)
         dough()
         scost=sobj.get_sauce_price()
         calculateCost(scost)
     elif(s=='d'):
-        sobj= BarbecueSauce(300)
+        sobj= BarbecueSauce(100)
         dough()
         scost=sobj.get_sauce_price()
         calculateCost(scost)
@@ -94,17 +94,17 @@ def cheese():
         sauce()
         return calculateCost(ccost)
     elif(ch=='ii'):
-        cobj= ParmesanChesse(250)
+        cobj= ParmesanChesse(150)
         ccost=cobj.get_cheese_price()
         sauce()
         return calculateCost(ccost)
     elif(ch=='iii'):
-        cobj= ProvoloneChesse(200)
+        cobj= ProvoloneChesse(180)
         ccost=cobj.get_cheese_price()
         sauce()
         return calculateCost(ccost)
     elif(ch=='iv'):
-        cobj= RegiannoChesse(300)
+        cobj= RegiannoChesse(200)
         ccost=cobj.get_cheese_price()
         sauce()
         return calculateCost(ccost)
