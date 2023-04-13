@@ -114,13 +114,13 @@ def cheese():
 
 def main():
     global pcost
-    print("MENU")
+    print("---------------MENU---------------")
     print("Select a pizza:")
     print("1. Greek Pizza")
     print("2. Chicago Pizza")
     print("3. New York Style Pizza")
     print("4. Sicillian Pizza")
-    p=int(input("Enter your choice: "))
+    p=int(input("\nEnter your choice: "))
     if(p==1):
         pobj= GreekPizza(100)
         pcost=pobj.get_pizza_price()
