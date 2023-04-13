@@ -8,10 +8,9 @@ class Pizza(ABC):
     def get_pizza_price(self):
         return self.__basePrice
 
-    @abstractmethod
     def calculateCost(self):
        pass
-    @abstractmethod
+    
     def displayDetails(self):
        pass
 

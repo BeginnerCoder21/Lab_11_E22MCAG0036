@@ -1,6 +1,5 @@
 # Name: Anushka Purwar
 # Roll no.: E22MCAG0036
-
 from GreekPizza import *
 from ChicagoPizza import *
 from NewYorkStylePizza import *
@@ -18,6 +17,7 @@ from ThickCrustDough import *
 from Pizza import *
 from Cheese import *
 from abc import ABC
+
 total=0
 dcost,ccost,pcost,scost=0,0,0,0
 cost=0
@@ -44,7 +44,7 @@ def dough():
     elif(d==2):
         dobj=ThickCrustDough(120)
         dcost=dobj.get_dough_price()
-        return dcost
+        calculateCost(dcost)
     else:
         print("You entered wrong choice!!")
 
@@ -61,26 +61,21 @@ def sauce():
         dough()
         scost=sobj.get_sauce_price()
         calculateCost(scost)
-        # res2+=scost
-        # return res2
     elif(s=='b'):
         sobj=PumpkinSauce(120)
-        res2=dough()
+        dough()
         scost=sobj.get_sauce_price()
-        res2+=scost
-        return res2
+        calculateCost(scost)
     elif(s=='c'):
         sobj= MarinaraSause(200)
-        res2=dough()
+        dough()
         scost=sobj.get_sauce_price()
-        res2+=scost
-        return res2
+        calculateCost(scost)
     elif(s=='d'):
         sobj= BarbecueSauce(300)
-        res2=dough()
+        dough()
         scost=sobj.get_sauce_price()
-        res2+=scost
-        return res2
+        calculateCost(scost)
     else:
         print("You entered wrong choice!!")
  
@@ -98,24 +93,21 @@ def cheese():
         ccost=cobj.get_cheese_price()
         sauce()
         return calculateCost(ccost)
-        # res3+=ccost
-        # return res3
-        
     elif(ch=='ii'):
         cobj= ParmesanChesse(250)
-        res3=sauce()
-        res3+=ccost
-        return res3
+        ccost=cobj.get_cheese_price()
+        sauce()
+        return calculateCost(ccost)
     elif(ch=='iii'):
         cobj= ProvoloneChesse(200)
-        res3=sauce()
-        res3+=ccost
-        return res3
+        ccost=cobj.get_cheese_price()
+        sauce()
+        return calculateCost(ccost)
     elif(ch=='iv'):
         cobj= RegiannoChesse(300)
-        res3=sauce()
-        res3+=ccost
-        return res3
+        ccost=cobj.get_cheese_price()
+        sauce()
+        return calculateCost(ccost)
     else:
         print("You entered wrong choice!!")
     
@@ -134,16 +126,21 @@ def main():
         pcost=pobj.get_pizza_price()
         cheese()
         calculateCost(pcost)
-       
     elif(p==2):
         pobj= ChicagoPizza(250)
+        pcost=pobj.get_pizza_price()
         cheese()
+        calculateCost(pcost)
     elif(p==3):
         pobj= NewYorkStylePizza(200)
+        pcost=pobj.get_pizza_price()
         cheese()
+        calculateCost(pcost)
     elif(p==4):
         pobj= SicillianPizza(300)
+        pcost=pobj.get_pizza_price()
         cheese()
+        calculateCost(pcost)
     else:
         print("You entered wrong choice!!")
 
